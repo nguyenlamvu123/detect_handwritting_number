@@ -35,8 +35,8 @@ for img in (
         # 'photo_6118490984477211117_y.jpg',
         # 'photo_6118490984477211118_y.jpg',
         # 'photo_6118490984477211119_y.jpg',
-        # 'photo_6118490984477211120 _y.jpg',
-        'photo_6118490984477211121 _y.jpg',
+        # 'photo_6118490984477211120_y.jpg',
+        'photo_6118490984477211121_y.jpg',
         # "digit.jpg",
 ):
     image = cv2.imread(img)
