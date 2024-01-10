@@ -5,6 +5,8 @@ from skimage.feature import hog
 from sklearn.svm import LinearSVC
 from keras.datasets import mnist
 from sklearn.metrics import accuracy_score
+
+
 #load data
 (X_train,y_train),(X_test,y_test) = mnist.load_data()
 
@@ -52,6 +54,7 @@ for img in (
         roi = np.pad(roi, (20, 20), 'constant', constant_values=(0, 0))
         roi = cv2.resize(roi, (28, 28), interpolation=cv2.INTER_AREA)
         roi = cv2.dilate(roi, (3, 3))
+        # for reference: https://pyimagesearch.com/2020/08/24/ocr-handwriting-recognition-with-opencv-keras-and-tensorflow/
 
         # Calculate the HOG features
         roi_hog_fd = hog(roi, orientations=9, pixels_per_cell=(14, 14), cells_per_block=(1, 1), block_norm="L2")
